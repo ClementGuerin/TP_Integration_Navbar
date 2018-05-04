@@ -1,0 +1,281 @@
+@import "includes/variables"
+
+body
+  font-family: 'Open Sans', sans-serif
+
+.Header
+  width: 100vw
+  display: flex
+  position: relative
+  margin-top: 1rem
+
+
+  &-logo
+    text-align: center
+    margin: 0 auto
+    width: 200px
+
+    img
+      width: 100%
+
+  &-burger
+    width: 30px
+    margin-left: 1rem
+    cursor: pointer
+    img
+      width: 100%
+
+  &-menu
+    width: 300px
+    position: absolute
+    left: -300px
+    transition: left .3s ease
+    background-color: white
+    .searchbar
+      input[type="text"]
+        margin-top: 0.5rem
+        display: inline-block
+        width: 160px
+        height: 20px
+
+      .loupe
+        display: inline-block
+        width: 20px
+        height: 19px
+        padding: 2.4px
+        margin-left: -4px
+        border: 1px solid $grey
+
+  &-buttons
+    display: flex
+    margin: 1rem 0
+
+  &-subscribe
+    width: 100px
+    height: 15px
+    background-color: $fucsia
+    padding: 1rem
+    margin-right: 1rem
+    border-radius: 3px
+
+    a
+      color: white
+      text-decoration: none
+      text-transform: uppercase
+
+  &-subscribe:hover
+    background-color: $darkFucsia
+
+  &-connect
+    width: 100px
+    height: 15px
+    background-color: $grey
+    padding: 1rem
+    border-radius: 3px
+
+    a
+      color: black
+      text-decoration: none
+      text-transform: uppercase
+  &-connect:hover
+    a
+      color: $fucsia
+  &-menuList
+    width: 100%
+    .menu-item
+      border-bottom: 1px solid $grey
+      padding: 1rem 0.2rem
+    .menu-item-link
+      text-decoration: none
+      color: black
+      font-size: 1rem
+
+    .menu-item:first-child
+      .menu-item-link
+        color: $fucsia
+    .menu-item:hover
+      background-color: $grey
+      .menu-item-link
+        color: $fucsia
+    .menu-large
+      display: none
+
+  &-buttonAdd
+    width: 250px
+    height: 15px
+    background-color: $lightBlue
+    color: white
+    padding: 1rem
+    text-transform: uppercase
+    margin-top: 1rem
+    display: flex
+    position: relative
+
+  .arrow
+    position: absolute
+    right: 10px
+    top: 12px
+    font-size: 1.5rem
+
+  .buttonAdd-text
+    position: absolute
+    left: 60px
+
+  .buttonAdd-image
+    display: none
+
+  .buttonAdd-image-plus
+    width: 15px
+    height: 15px
+    padding: 1rem
+    background-color: $darkBlue
+    position: absolute
+    left: 0
+    top: 0
+
+
+  &-buttonAdd:hover
+    background-color: $darkBlue
+
+  &-social
+    display: flex
+    margin-top: 1rem
+
+    .social-icon a
+      font-size: 2rem
+      margin-right: 1rem
+      color: grey
+
+.menuOpen
+  left: 15%
+
+@media (min-width: 900px)
+  .Header
+    display: flex
+    width: 100vw
+    &-logo
+      margin-left: 2rem
+
+    .searchbar
+      position: fixed
+      left: 30%
+      width: 200px
+      .bar
+        position: relative
+        width: 180px
+        .loupe
+          display: inline-block
+          position: absolute
+          top: 8px
+          right: -10px
+
+
+
+    &-social
+      position: fixed
+      left: 50%
+      top: 0
+
+    &-buttons
+      position: fixed
+      left: 65%
+      top: 0
+
+    &-menuList
+      margin-top: 2rem
+
+    &-buttonAdd
+      background: transparent
+
+
+    .buttonAdd-text
+      display: none
+    .buttonAdd-image
+      display: block
+      font-size: 2rem
+      z-index: 9000
+      position: fixed
+      left: 95%
+      top: 15px
+
+    .buttonAdd-image-plus
+      display: none
+
+    .arrow
+      display: none
+
+@media (min-width: 1355px)
+  .Header
+    width: 100vw
+    &-burger
+      display: none
+    &-menu
+      width: 100vw
+      position: absolute
+      background: transparent
+      left: 0
+
+      .searchbar
+        width: 20vw
+        left: 20%
+        .bar
+          width: 30%
+          input
+            width: 500px
+            height: 30px
+          .loupe
+            width: 20px
+            height: 20px
+            left: 509px
+            padding: 0.4rem
+            margin-top: 1px
+
+    &-buttons
+      left: 75%
+
+    &-social
+      left: 60%
+      top: 10px
+
+    &-buttonAdd:hover
+      background: transparent
+
+    &-menuList
+      width: 98vw
+      height: 20px
+      display: flex
+      margin-top: 60px
+      background-color: $grey
+      padding: 1rem
+
+      .menu-item
+        border: none
+        height: 30px
+        padding: 0
+        margin-right: 1rem
+        margin-left: 1rem
+
+      .menu-item:hover
+        .menu-item-link
+          border-bottom: 3px solid $fucsia
+
+      .menu-large
+        display: flex
+        position: fixed
+        right: 5%
+
+        .menu-item
+          margin-left: 1rem
+          a
+            text-decoration: none
+            color: black
+
+        .menu-item:hover
+          a
+            border-bottom: 3px solid $fucsia
+
+
+
+
+
+

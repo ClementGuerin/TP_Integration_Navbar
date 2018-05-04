@@ -1,0 +1,226 @@
+body {
+  font-family: "Open Sans", sans-serif; }
+
+.Header {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  margin-top: 1rem; }
+  .Header-logo {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px; }
+    .Header-logo img {
+      width: 100%; }
+  .Header-burger {
+    width: 30px;
+    margin-left: 1rem;
+    cursor: pointer; }
+    .Header-burger img {
+      width: 100%; }
+  .Header-menu {
+    width: 300px;
+    position: absolute;
+    left: -300px;
+    transition: left 0.3s ease;
+    background-color: white; }
+    .Header-menu .searchbar input[type="text"] {
+      margin-top: 0.5rem;
+      display: inline-block;
+      width: 160px;
+      height: 20px; }
+    .Header-menu .searchbar .loupe {
+      display: inline-block;
+      width: 20px;
+      height: 19px;
+      padding: 2.4px;
+      margin-left: -4px;
+      border: 1px solid #f2f2f2; }
+  .Header-buttons {
+    display: flex;
+    margin: 1rem 0; }
+  .Header-subscribe {
+    width: 100px;
+    height: 15px;
+    background-color: #da0751;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 3px; }
+    .Header-subscribe a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .Header-subscribe:hover {
+    background-color: #a90641; }
+  .Header-connect {
+    width: 100px;
+    height: 15px;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-radius: 3px; }
+    .Header-connect a {
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .Header-connect:hover a {
+    color: #da0751; }
+  .Header-menuList {
+    width: 100%; }
+    .Header-menuList .menu-item {
+      border-bottom: 1px solid #f2f2f2;
+      padding: 1rem 0.2rem; }
+    .Header-menuList .menu-item-link {
+      text-decoration: none;
+      color: black;
+      font-size: 1rem; }
+    .Header-menuList .menu-item:first-child .menu-item-link {
+      color: #da0751; }
+    .Header-menuList .menu-item:hover {
+      background-color: #f2f2f2; }
+      .Header-menuList .menu-item:hover .menu-item-link {
+        color: #da0751; }
+    .Header-menuList .menu-large {
+      display: none; }
+  .Header-buttonAdd {
+    width: 250px;
+    height: 15px;
+    background-color: #0ba7c8;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    display: flex;
+    position: relative; }
+  .Header .arrow {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 1.5rem; }
+  .Header .buttonAdd-text {
+    position: absolute;
+    left: 60px; }
+  .Header .buttonAdd-image {
+    display: none; }
+  .Header .buttonAdd-image-plus {
+    width: 15px;
+    height: 15px;
+    padding: 1rem;
+    background-color: #0a89a5;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .Header-buttonAdd:hover {
+    background-color: #0a89a5; }
+  .Header-social {
+    display: flex;
+    margin-top: 1rem; }
+    .Header-social .social-icon a {
+      font-size: 2rem;
+      margin-right: 1rem;
+      color: grey; }
+
+.menuOpen {
+  left: 15%; }
+
+@media (min-width: 900px) {
+  .Header {
+    display: flex;
+    width: 100vw; }
+    .Header-logo {
+      margin-left: 2rem; }
+    .Header .searchbar {
+      position: fixed;
+      left: 30%;
+      width: 200px; }
+      .Header .searchbar .bar {
+        position: relative;
+        width: 180px; }
+        .Header .searchbar .bar .loupe {
+          display: inline-block;
+          position: absolute;
+          top: 8px;
+          right: -10px; }
+    .Header-social {
+      position: fixed;
+      left: 50%;
+      top: 0; }
+    .Header-buttons {
+      position: fixed;
+      left: 65%;
+      top: 0; }
+    .Header-menuList {
+      margin-top: 2rem; }
+    .Header-buttonAdd {
+      background: transparent; }
+    .Header .buttonAdd-text {
+      display: none; }
+    .Header .buttonAdd-image {
+      display: block;
+      font-size: 2rem;
+      z-index: 9000;
+      position: fixed;
+      left: 95%;
+      top: 15px; }
+    .Header .buttonAdd-image-plus {
+      display: none; }
+    .Header .arrow {
+      display: none; } }
+@media (min-width: 1355px) {
+  .Header {
+    width: 100vw; }
+    .Header-burger {
+      display: none; }
+    .Header-menu {
+      width: 100vw;
+      position: absolute;
+      background: transparent;
+      left: 0; }
+      .Header-menu .searchbar {
+        width: 20vw;
+        left: 20%; }
+        .Header-menu .searchbar .bar {
+          width: 30%; }
+          .Header-menu .searchbar .bar input {
+            width: 500px;
+            height: 30px; }
+          .Header-menu .searchbar .bar .loupe {
+            width: 20px;
+            height: 20px;
+            left: 509px;
+            padding: 0.4rem;
+            margin-top: 1px; }
+    .Header-buttons {
+      left: 75%; }
+    .Header-social {
+      left: 60%;
+      top: 10px; }
+    .Header-buttonAdd:hover {
+      background: transparent; }
+    .Header-menuList {
+      width: 98vw;
+      height: 20px;
+      display: flex;
+      margin-top: 60px;
+      background-color: #f2f2f2;
+      padding: 1rem; }
+      .Header-menuList .menu-item {
+        border: none;
+        height: 30px;
+        padding: 0;
+        margin-right: 1rem;
+        margin-left: 1rem; }
+      .Header-menuList .menu-item:hover .menu-item-link {
+        border-bottom: 3px solid #da0751; }
+      .Header-menuList .menu-large {
+        display: flex;
+        position: fixed;
+        right: 5%; }
+        .Header-menuList .menu-large .menu-item {
+          margin-left: 1rem; }
+          .Header-menuList .menu-large .menu-item a {
+            text-decoration: none;
+            color: black; }
+        .Header-menuList .menu-large .menu-item:hover a {
+          border-bottom: 3px solid #da0751; } }
+
+/*# sourceMappingURL=main.css.map */
